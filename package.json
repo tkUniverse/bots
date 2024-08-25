@@ -10,9 +10,14 @@
     "node": "^22.6.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:discord": "node discord/index.js",
+    "start:telegram": "node telegram/index.js",
+    "start": "concurrently \"npm run start:discord\" \"npm run start:telegram\""
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }
